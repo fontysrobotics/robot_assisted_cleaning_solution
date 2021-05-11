@@ -4,7 +4,7 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="robot_assisted_cleaning_solution" xmlns:xacro="example_robot">
-  <xacro:include filename="$(find robot_assisted_cleaning_solution)/urdf/robot.gazebo.xacro" />
+  <xacro:include filename="$(find robot_assisted_cleaning_solution)/urdf/robot_assisted_cleaning_solution.gazebo.xacro" />
   
   <!-- region footprint -->
   <link name="base_footprint" />
