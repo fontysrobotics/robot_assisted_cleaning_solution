@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version:   Build Version: 1.5.7585.28670
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_assisted_cleaning_solution">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_1">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/wheel_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/wheel_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_joint_1"
+    type="continuous">
+    <origin
+      xyz="-5.78290400675118E-05 0.114675012827827 -0.122971466594445"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="wheel_2">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/wheel_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/wheel_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_joint_2"
+    type="continuous">
+    <origin
+      xyz="-5.78290400674879E-05 -0.114614309053521 -0.122971466594445"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="caster_1">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint_1"
+    type="continuous">
+    <origin
+      xyz="-0.208635525832463 -0.114614309053521 -0.105971545183645"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster_2">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint_2"
+    type="continuous">
+    <origin
+      xyz="0.208521761692918 -0.114614309053521 -0.105971545183645"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster_3">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint_3"
+    type="continuous">
+    <origin
+      xyz="0.208521761692915 0.114675012827827 -0.105971545183645"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster_4">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/caster_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint_4"
+    type="continuous">
+    <origin
+      xyz="-0.208635525832461 0.114675012827827 -0.105971545183645"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="lidar_1">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/lidar_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/lidar_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint_1"
+    type="fixed">
+    <origin
+      xyz="-0.300056882069774 -0.199969648112847 -0.105471545183645"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_2">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/lidar_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/lidar_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint_2"
+    type="fixed">
+    <origin
+      xyz="0.299943117930226 0.200030351887153 -0.105471545183645"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ir_1">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/ir_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/ir_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ir_joint_1"
+    type="fixed">
+    <origin
+      xyz="-0.264701543010446 0.00163035188715408 -0.112971545183645"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="ir_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ir_2">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/ir_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/ir_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ir_joint_2"
+    type="fixed">
+    <origin
+      xyz="0.2645877788709 -0.00156964811284664 -0.112971545183645"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ir_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="us_1">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/us_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/us_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="us_joint_1"
+    type="fixed">
+    <origin
+      xyz="-0.134541543010445 -0.164614309053521 -0.112971545183645"
+      rpy="3.14159265358979 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="us_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="us_2">
+    <inertial>
+      <origin
+        xyz="-0.000913386239851091 -2.54764905186757E-06 0.0112927831007752"
+        rpy="0 0 0" />
+      <mass
+        value="43.66289" />
+      <inertia
+        ixx="0.794216412051149"
+        ixy="-0.000219442594284593"
+        ixz="0.00035981237829047"
+        iyy="1.53053604086592"
+        iyz="-0.000149715728017838"
+        izz="1.83362160851237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/us_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_assisted_cleaning_solution/meshes/us_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="us_joint_2"
+    type="fixed">
+    <origin
+      xyz="0.109027778870899 -0.164614309053521 -0.112971545183645"
+      rpy="3.14159265358979 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="us_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
