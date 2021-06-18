@@ -1,6 +1,4 @@
 <launch>
-  <include file="$(find office_test_environment)/launch/office.launch"/>
-  
   <param name="robot_description" command="$(find xacro)/xacro '$(find robot_assisted_cleaning_solution)/urdf/robot_assisted_cleaning_solution.urdf.xacro'"/>
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >

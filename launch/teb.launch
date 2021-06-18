@@ -22,6 +22,6 @@
 		<param name="frame_id" value="map" />
 	</node>
 
-	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d '$(find robot_assisted_cleaning_solution)/navigation.rviz'" /> -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d '$(find robot_assisted_cleaning_solution)/navigation.rviz'" />
 
 </launch>
