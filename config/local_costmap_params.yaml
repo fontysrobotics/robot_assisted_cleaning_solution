@@ -10,6 +10,5 @@ local_costmap:
   transform_tolerance: 0.5
   
   plugins:
-  #  - {name: range_sensor_layer,  type: "range_sensor_layer::RangeSensorLayer"}
    - {name: static_layer,        type: "costmap_2d::StaticLayer"}
    - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}

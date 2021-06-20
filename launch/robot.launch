@@ -8,6 +8,4 @@
 
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -x 0 -y 0 -z 0 -Y 0 -model example_urdf -param robot_description" />
 
-  <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
-
 </launch>

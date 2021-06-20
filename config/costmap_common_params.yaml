@@ -27,9 +27,3 @@ inflation_layer:
 static_layer:
   enabled:              true
   map_topic:            "/map"
-
-# range_sensor_layer:
-#   clear_threshold: 0.05
-#   mark_threshold: 0.15
-#   clear_on_max_reading: true
-#   topics: ["/ir_front"]

@@ -18,10 +18,6 @@
 		<rosparam file="$(find robot_assisted_cleaning_solution)/config/amcl_params.yaml" command="load" />
 	</node>
 
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find robot_assisted_cleaning_solution)/office_map.yaml" output="screen">
-		<param name="frame_id" value="map" />
-	</node>
-
 	<node name="rviz" pkg="rviz" type="rviz" args="-d '$(find robot_assisted_cleaning_solution)/navigation.rviz'" />
 
 </launch>

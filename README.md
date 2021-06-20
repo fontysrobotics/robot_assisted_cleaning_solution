@@ -49,8 +49,7 @@ This package contains:
 * Simple test launch file.
 
 ## Launch in gazebo
-The robot will by example be spawn in the office test environment.
-The map of the world (now the office test environment) can be changed in line 21 from the teb.launch file in the robot_assisted_cleaning_solution package.
+The robot will be spawned in the office test environment. When needed with the map of the enviorment
 
 To start empty world gazebo with the robot:
 
@@ -58,13 +57,11 @@ To start empty world gazebo with the robot:
     
 To start the mapping with the robot:
 
-	roslaunch office_test_environment office.launch
-	roslaunch robot_assisted_cleaning_solution robot.launch
 	roslaunch robot_assisted_cleaning_solution mapping.launch
 	rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+	rosrun map_server map_saver -f map
 		
 To start navigation with the robot:
 
-	roslaunch office_test_environment office.launch
-	roslaunch robot_assisted_cleaning_solution robot.launch
-	roslaunch robot_assisted_cleaning_solution teb.launch
+	roslaunch robot_assisted_cleaning_solution navigation.launch

@@ -33,8 +33,8 @@ endforeach(dir)
 install(FILES
   maps/office_map.yaml
   maps/office_map.pgm
-  maps/half_office.yaml
-  maps/half_office.pgm
+  maps/one_lidar.pgm
+  maps/one_lidar.yaml
 
   rviz/amcl.rviz
   rviz/gmapping.rviz
