@@ -19,7 +19,7 @@
 <!-- end  manual mode with teleop -->  
 
 <!--#region laser-->
-  <gazebo reference="lidar_1">
+  <gazebo reference="lidar_top">
     <sensor type="ray" name="fullradious">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
@@ -27,16 +27,16 @@
       <ray>
         <scan>
           <horizontal>
-            <samples>720</samples>
-            <resolution>1</resolution>
-            <min_angle>-4.68</min_angle>
-            <max_angle>-0.03</max_angle>
+            <samples>400</samples>
+            <resolution>0.9</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>6.283185</max_angle>
           </horizontal>
         </scan>
         <range>
-          <min>0.10</min>
-          <max>9.0</max>
-          <resolution>0.01</resolution>
+          <min>0.15</min>
+          <max>6.0</max>
+          <resolution>0.1</resolution>
         </range>
         <noise>
           <type>gaussian</type>
@@ -45,43 +45,11 @@
         </noise>
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">        
-        <topicName>scan1</topicName>
-        <frameName>lidar_1</frameName>
+        <topicName>scan</topicName>
+        <frameName>lidar_top</frameName>
       </plugin>
     </sensor>
   </gazebo>
-
-  <gazebo reference="lidar_2">
-    <sensor type="ray" name="halfradious">
-      <pose>0 0 0 0 0 0</pose>
-      <visualize>false</visualize>
-      <update_rate>40</update_rate>
-      <ray>
-        <scan>
-          <horizontal>
-            <samples>720</samples>
-            <resolution>1</resolution>
-            <min_angle>-1.54</min_angle>
-            <max_angle>3.11</max_angle>
-          </horizontal>
-        </scan>
-        <range>
-          <min>0.10</min>
-          <max>9.0</max>
-          <resolution>0.01</resolution>
-        </range>
-        <noise>
-          <type>gaussian</type>
-          <mean>0.0</mean>
-          <stddev>0.01</stddev>
-        </noise>
-      </ray>
-      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">        
-        <topicName>scan2</topicName>
-        <frameName>lidar_2</frameName>
-      </plugin>
-    </sensor>
-  </gazebo> 
 <!-- #endregion lasers -->
 
 

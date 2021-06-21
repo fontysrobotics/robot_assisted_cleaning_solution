@@ -374,6 +374,28 @@
     <axis
       xyz="0 0 -1" />
   </joint>
+
+  <link name="lidar_top">
+    <visual>
+      <geometry>
+        <cylinder length="0.04080" radius="0.03785"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint
+    name="lidar_top_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00091 -0 0.1537" 
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_top" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
   <link
     name="lidar_1">
     <inertial>

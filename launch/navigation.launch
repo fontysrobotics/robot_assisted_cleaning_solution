@@ -1,13 +1,11 @@
 <launch>
     <include file="$(find office_test_environment)/launch/office.launch"/>
 
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find robot_assisted_cleaning_solution)/office_map.yaml" output="screen">
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find robot_assisted_cleaning_solution)/one_lidar.yaml" output="screen">
 		  <param name="frame_id" value="map" />
 	  </node>
 
     <include file="$(find robot_assisted_cleaning_solution)/launch/robot.launch"/>
     <include file="$(find robot_assisted_cleaning_solution)/launch/teb.launch"/>
-
-    <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
 
 </launch>

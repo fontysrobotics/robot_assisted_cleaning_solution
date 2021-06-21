@@ -4,5 +4,4 @@
     <include file="$(find robot_assisted_cleaning_solution)/launch/robot.launch"/>
     <include file="$(find robot_assisted_cleaning_solution)/launch/gmapping.launch"/>
 
-    <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
 </launch>
