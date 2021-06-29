@@ -7,6 +7,8 @@ find_package(catkin REQUIRED COMPONENTS
    rospy
    std_msgs
    message_generation
+   sensor_msgs
+   assisted_cleaning_solution
 )
 
 ## catkin_package(CATKIN_DEPENDS message_runtime...)
@@ -16,7 +18,15 @@ generate_messages(
   std_msgs
 )
 
-catkin_package()
+catkin_package(
+   CATKIN_DEPENDS message_runtime
+)
+
+catkin_install_python(PROGRAMS
+   scripts/range_pub.py
+   scripts/odom_pub.py
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 find_package(roslaunch)
 

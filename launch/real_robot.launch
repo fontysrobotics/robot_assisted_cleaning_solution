@@ -1,0 +1,16 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro '$(find robot_assisted_cleaning_solution)/urdf/robot_assisted_cleaning_solution.urdf.xacro'"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <param name="use_gui" value="false" />
+  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node pkg="robot_assisted_cleaning_solution" name="odom_pub" type="odom_pub.py"/>
+  <node pkg="robot_assisted_cleaning_solution" name="sonar1" type="range_pub.py" output="screen" args="sonar1"/>
+  <node pkg="robot_assisted_cleaning_solution" name="sonar2" type="range_pub.py" output="screen" args="sonar2"/>
+  <node pkg="robot_assisted_cleaning_solution" name="ir_back" type="range_pub.py" output="screen" args="ir_back"/>
+  <node pkg="robot_assisted_cleaning_solution" name="ir_front" type="range_pub.py" output="screen" args="ir_front"/>
+  <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+</launch>
