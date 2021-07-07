@@ -65,3 +65,15 @@ To start the mapping with the robot:
 To start navigation with the robot:
 
 	roslaunch robot_assisted_cleaning_solution navigation.launch
+	
+## Launch on real robot
+In the launch files of mapping and navigation. In these launch files the launch of robot should be changed to real_robot.
+From this:
+
+	<include file="$(find robot_assisted_cleaning_solution)/launch/robot.launch"/>
+	
+To this:
+
+	<include file="$(find robot_assisted_cleaning_solution)/launch/real_robot.launch"/>
+	
+In the real robot file the odom and sensors topic is being published in the correct format. The data from the sensors is published over the sensor topic by the microcontroller in the assisted cleaning solution package. The lidar data is being published by the rplidar package.
