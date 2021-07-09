@@ -5,7 +5,7 @@ from tf import transformations
 import math
 
 from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Twist
+from assisted_cleaning_solution.msg import Sensor
 
 class odom_publisher():
     def __init__(self):
@@ -13,7 +13,7 @@ class odom_publisher():
         self.odom_publisher = rospy.Publisher('odom', Odometry, queue_size=10)
         self.odom_broadcaster = tf.TransformBroadcaster()
 
-        self.speed_subscriber = rospy.Subscriber('cmd_vel', Twist, self.speed_CB)
+        self.speed_subscriber = rospy.Subscriber('sensor', Sensor, self.speed_CB)
         self.timer = rospy.Timer(rospy.Duration(1), self.timer_callback)
 
         self.x = 0.0
@@ -33,8 +33,8 @@ class odom_publisher():
         self.execute()
 
     def speed_CB(self, speed):
-        self.vx = speed.linear.x
-        self.vth = speed.angular.z
+        self.vx = speed.vx
+        self.vth = speed.vth
 
     def execute(self):
         self.current_time = rospy.Time.now()
